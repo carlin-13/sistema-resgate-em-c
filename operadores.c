@@ -89,9 +89,10 @@ void buscarOperadorNome() {
     for(int i=0; i < qtdOps; i++) {
         // strstr: Requisito funcional para busca parcial
         if (strstr(listaOps[i].nome, termo) != NULL) {
-            printf(">> ID: %d | Nome: %-20s | Status: %s\n", 
+            printf(">> ID: %d|Nome: %-20s|Cargo: %-15s|Status: %s\n", 
                 listaOps[i].id, 
                 listaOps[i].nome, 
+                listaOps[i].cargo,
                 (listaOps[i].status == 1 ? "LIVRE" : "EM MISSAO"));
             achou = 1;
         }
