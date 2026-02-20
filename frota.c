@@ -165,4 +165,5 @@ void menuFrota() {
         if(op==2) listarViaturas();
         if(op==3) acionarRadar();
     } while(op!=0);
+
 }
