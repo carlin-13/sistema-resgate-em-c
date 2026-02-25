@@ -16,7 +16,7 @@ typedef struct {
     char modelo[30];  
     int x, y;         
     int status; // 1-Livre, 0-Ocupada
-} Viatura;
+} Viatura; 
 
 // Estrutura da Missão
 typedef struct {
@@ -27,5 +27,6 @@ typedef struct {
     int idViatura;
     int status; // 1-Em Andamento, 2-Concluida
 } Missao;
+
 
 #endif
