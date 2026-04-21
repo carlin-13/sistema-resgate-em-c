@@ -1,3 +1,5 @@
+// Utilizei aqui para guardar as structs que irei utilizar 
+
 #ifndef DADOS_H
 #define DADOS_H
 
