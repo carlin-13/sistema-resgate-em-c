@@ -3,7 +3,7 @@
 #include <string.h>
 #include "dados.h" // Puxa as structs
 
-// --- IMPORTANTE: CONECTANDO COM OS OUTROS ARQUIVOS ---
+// Utilzando para conectar com os outros arquivos 
 extern Operador listaOps[];
 extern int qtdOps;
 extern Viatura frota[];
