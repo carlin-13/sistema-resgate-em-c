@@ -70,7 +70,7 @@ void listarOperadores() {
     system("pause");
 }
 
-// FUNÇÃO DE BUSCA COMPLETA (Atende ao requisito strstr do PDF)
+// Função de Busca completa 
 void buscarOperadorNome() {
     char termo[50];
     
