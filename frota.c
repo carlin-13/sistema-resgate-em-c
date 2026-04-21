@@ -100,7 +100,7 @@ void acionarRadar() {
         else break;
     } while (1); 
 
-    // --- DESENHO DO MAPA ---
+    // Aqui irá ser desenhado um map contendo as viaturas 
     printf("\n      MAPA OPERACIONAL\n");
     printf("     0  1  2  3  4  5  6  7  8  9\n");
     printf("    -------------------------------\n");
@@ -123,7 +123,7 @@ void acionarRadar() {
     }
     printf("    -------------------------------\n");
     
-    // --- LEGENDA (Restaurada) ---
+    // Legenda 
     printf(" LEGENDA: [V] Livre  [O] Ocupado\n");
     printf("          [X] Acidente [.] Vazio\n");
     printf("-----------------------------------\n");
