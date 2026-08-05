@@ -1,12 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
-
-// Os arquivos .c são incluídos para que o main.c tenha acesso às funções
-#include "operadores.c" 
-#include "frota.c"      
-#include "missoes.c"    
+#include <time.h>  
 
 int main() {
     // Inicializa a aleatoriedade para as viaturas
