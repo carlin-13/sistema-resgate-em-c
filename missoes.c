@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "dados.h" // Puxa as structs
+#include "dados.h" //Puxa as structs
 
-// Utilzando para conectar com os outros arquivos 
+//Utilzando para conectar com os outros arquivos 
 extern Operador listaOps[];
 extern int qtdOps;
 extern Viatura frota[];
@@ -69,7 +69,7 @@ void cadastrarMissao() {
     system("pause");
 }
 
-void listarMissoes() {
+void listarMissoes() {         //função para averiguar o histórico
     printf("\n--- HISTORICO ---\n");
     for(int i=0; i<qtdMissoes; i++) {
         printf("#%d | %s | Data: %s | Op: %d | Via: %d\n",
