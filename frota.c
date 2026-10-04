@@ -8,9 +8,9 @@
 #define TAM_MAPA 10
 #define TAM_FROTA 100 
 
-// Variáveis Globais da Frota
+//Variáveis Globais da Frota
 Viatura frota[TAM_FROTA];
-int qtdViaturas = 0;
+int qtdViaturas = 0;   
 int dadosIniciados = 0; 
 
 // Funções Auxiliares
@@ -19,7 +19,7 @@ int sortearPosicao() { return rand() % TAM_MAPA; }
 void inicializarFrotaTeste() {
     if(dadosIniciados) return; 
     
-    frota[0].id = 101; strcpy(frota[0].tipo, "Helicoptero"); strcpy(frota[0].modelo, "Aguia-01");
+    frota[0].id = 101; strcpy(frota[0].tipo, "Helicoptero"); strcpy(frota[0].modelo, "Aguia-01");   #adiciona por padrão um veiculo x para o helicoptero
     frota[0].x = sortearPosicao(); frota[0].y = sortearPosicao(); frota[0].status = 1;
 
     frota[1].id = 102; strcpy(frota[1].tipo, "Ambulancia"); strcpy(frota[1].modelo, "SAMU-B");
@@ -32,11 +32,11 @@ void inicializarFrotaTeste() {
     dadosIniciados = 1; 
 }
 
-double calcularDistancia(int x1, int y1, int x2, int y2) {
+double calcularDistancia(int x1, int y1, int x2, int y2) {     //utilizando a formula da norma euclidiana para calcular a distancia
     return abs(x1 - x2) + abs(y1 - y2); 
 }
 
-int verificarIdViaturaDuplicado(int id) {
+int verificarIdViaturaDuplicado(int id) {         // função que verifica se uma viatura já existe, pelo id que ela possui
     for (int i = 0; i < qtdViaturas; i++) {
         if (frota[i].id == id) return 1;
     }
@@ -100,13 +100,13 @@ void acionarRadar() {
         else break;
     } while (1); 
 
-    // Aqui irá ser desenhado um map contendo as viaturas 
-    printf("\n      MAPA OPERACIONAL\n");
+    //Aqui irá ser desenhado um map contendo as viaturas 
+    printf("\n      MAPA OPERACIONAL\n");    
     printf("     0  1  2  3  4  5  6  7  8  9\n");
     printf("    -------------------------------\n");
     for (int i = 0; i < 10; i++) {
         printf(" %d |", i);
-        for (int j = 0; j < 10; j++) {
+        for (int j = 0; j < 10; j++) {                       //formato do mapa
             int plot = 0;
             for(int k=0; k<qtdViaturas; k++) {
                 if(frota[k].x == i && frota[k].y == j) {
@@ -123,12 +123,12 @@ void acionarRadar() {
     }
     printf("    -------------------------------\n");
     
-    // Legenda 
+    //Legenda 
     printf(" LEGENDA: [V] Livre  [O] Ocupado\n");
     printf("          [X] Acidente [.] Vazio\n");
     printf("-----------------------------------\n");
 
-    // Busca de Viatura Mais Próxima
+    //Busca de Viatura Mais Próxima
     int idMais = -1; 
     double menorDist = 999.0;
     for(int i=0; i<qtdViaturas; i++) {
