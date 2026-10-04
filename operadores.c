@@ -3,11 +3,11 @@
 #include <string.h>
 #include "dados.h" 
 
-// Banco de Dados local
+//Banco de Dados local limitado
 Operador listaOps[100];
 int qtdOps = 0;
 
-// Função para evitar IDs repetidos (Requisito do PDF)
+//Função para evitar IDs repetidos (Requisito do PDF)
 int verificarIdDuplicado(int id) {
     for (int i = 0; i < qtdOps; i++) {
         if (listaOps[i].id == id) return 1;
@@ -28,7 +28,7 @@ void cadastrarOperador() {
         printf("Digite o ID (numero unico): ");
         scanf("%d", &idTemp);
         
-        // Limpeza de buffer (Vassoura) para não pular o nome depois
+        //Limpeza de buffer (Vassoura) para não pular o nome depois
         int c; while ((c = getchar()) != '\n' && c != EOF) { }
 
         if (idTemp <= 0) printf("[ERRO] ID deve ser maior que zero.\n");
@@ -70,11 +70,11 @@ void listarOperadores() {
     system("pause");
 }
 
-// Função de Busca completa 
+//Função de Busca completa 
 void buscarOperadorNome() {
     char termo[50];
     
-    // Limpeza de buffer crucial para o fgets funcionar após o scanf do menu
+    //Limpeza de buffer crucial para o fgets funcionar após o scanf do menu
     int c; while ((c = getchar()) != '\n' && c != EOF) { }
 
     printf("\n--- BUSCAR OPERADOR ---\n");
@@ -87,7 +87,7 @@ void buscarOperadorNome() {
     int achou = 0;
     
     for(int i=0; i < qtdOps; i++) {
-        // strstr: Requisito funcional para busca parcial
+        //strstr: Requisito funcional para busca parcial
         if (strstr(listaOps[i].nome, termo) != NULL) {
             printf(">> ID: %d|Nome: %-20s|Cargo: %-15s|Status: %s\n", 
                 listaOps[i].id, 
